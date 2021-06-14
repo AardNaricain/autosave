@@ -26,10 +26,14 @@
 
 <script>
 <![CDATA[
+  local last_save = os.clock()
+  local AUTOSAVE_INTERVAL = 60 * 10 -- 10 minutes apart
+
   function do_autosave()
-    if GetInfo (111) then
-      Save ()
-      ColourNote ("white", "blue", "World file saved.")
+    if GetInfo(111) or last_save + AUTOSAVE_INTERVAL < os.clock() then
+      Save()
+      ColourNote("white", "blue", "World file saved.")
+      last_save = os.clock()
     end
   end
 ]]>
