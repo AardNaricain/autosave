@@ -14,7 +14,7 @@
    purpose="Autosave the world file when there are any changes"
    save_state="y"
    date_written="2021-06-14 11:31:18"
-   requires="5.07"
+   requires="5.00"
    version="1.0"
    >
 
